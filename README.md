@@ -8,4 +8,6 @@
 - 修改代码块字体
 - 支持代码高亮（highlight.js）
 
-[](screenshot.png)
+演示：[我的博客](https://blog.xiaozhisoc.net)
+
+![](screenshot.png)
