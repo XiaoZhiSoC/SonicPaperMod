@@ -1,0 +1,109 @@
+{{- define "sonic_theme_paper_mod/index" -}}
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head>
+<title>Home - {{ .blog_title }}</title>
+{{ template "sonic_theme_paper_mod/module/head" .}}
+</head>
+
+<body class="list" id="top">
+
+{{template "sonic_theme_paper_mod/module/header" .}}
+
+<main class="main"> 
+{{ if not .posts.PageNum }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>
+        {{ .settings.home_info_title }}
+        </h1>
+    </header>
+    <div class="entry-content">
+        {{ noescape .settings.home_info_content }}
+</div>
+<footer class="entry-footer">
+<div class="social-icons">
+{{ if  .settings.github }}
+<a href="{{ .settings.github}}" target="_blank" title="Github">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+stroke-linecap="round" stroke-linejoin="round">
+<path
+d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+</path>
+</svg>
+</a>
+{{ end }}
+{{ if  .settings.email }}
+<a href="mailto:{{ .settings.email}}" target="_blank" title="Email">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+stroke-linecap="round" stroke-linejoin="round">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+<polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+{{ end }}
+{{ if  .settings.twitter }}
+<a href="{{ .settings.twitter}}" target="_blank" title="Twitter">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" fill="none" viewBox="0 0 512 512" id="twitter"><g clip-path="url(#clip0_84_15697)"><rect width="512" height="512" fill="#000" rx="60"></rect><path fill="#fff" d="M355.904 100H408.832L293.2 232.16L429.232 412H322.72L239.296 302.928L143.84 412H90.8805L214.56 270.64L84.0645 100H193.28L268.688 199.696L355.904 100ZM337.328 380.32H366.656L177.344 130.016H145.872L337.328 380.32Z"></path></g><defs><clipPath id="clip0_84_15697"><rect width="512" height="512" fill="#fff"></rect></clipPath></defs></svg>
+</a>
+{{ end }}
+{{ if  .settings.telegram }}
+<a href="{{ .settings.telegram}}" target="_blank" title="Telegram">
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48" id="telegram"><rect width="48" height="48" fill="#419FD9" rx="24"></rect><rect width="48" height="48" fill="url(#paint0_linear)" rx="24"></rect><path fill="#fff" d="M10.7874 23.4709C17.7667 20.3663 22.4206 18.3195 24.7493 17.3305C31.3979 14.507 32.7795 14.0165 33.68 14.0002C33.878 13.9968 34.3208 14.0469 34.6077 14.2845C34.8499 14.4852 34.9165 14.7563 34.9484 14.9465C34.9803 15.1368 35.02 15.5702 34.9884 15.9088C34.6281 19.774 33.0692 29.1539 32.276 33.483C31.9404 35.3148 31.2796 35.929 30.6399 35.9891C29.2496 36.1197 28.1938 35.051 26.8473 34.1497C24.7401 32.7395 23.5498 31.8615 21.5044 30.4854C19.1407 28.895 20.673 28.0209 22.0201 26.5923C22.3726 26.2185 28.4983 20.5295 28.6169 20.0135C28.6317 19.9489 28.6455 19.7083 28.5055 19.5813C28.3655 19.4543 28.1589 19.4977 28.0098 19.5322C27.7985 19.5812 24.4323 21.8529 17.9113 26.3473C16.9558 27.0172 16.0904 27.3435 15.315 27.3264C14.4602 27.3076 12.8159 26.833 11.5935 26.4273C10.0942 25.9296 8.90254 25.6666 9.0063 24.8215C9.06035 24.3813 9.65403 23.9311 10.7874 23.4709Z"></path><defs><linearGradient id="paint0_linear" x1="24" x2="24" y2="47.644" gradientUnits="userSpaceOnUse"><stop stop-color="#2AABEE"></stop><stop offset="1" stop-color="#229ED9"></stop></linearGradient></defs>
+</svg>
+</a>
+{{ end }}
+{{ if  .settings.qq }}
+<a href="{{ .settings.qq}}" target="_blank" title="QQ">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+stroke-linecap="round" stroke-linejoin="round">
+<path transform="scale(0.04) translate(75 40)" stroke-width="50"
+    d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z">
+</path>
+</svg>
+</a>
+{{ end }}
+{{ if  .settings.rss }}
+<a href="atom.xml" target="_blank" title="RSS">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+stroke-linecap="round" stroke-linejoin="round">
+<path d="M4 11a9 9 0 0 1 9 9" />
+<path d="M4 4a16 16 0 0 1 16 16" />
+<circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+{{ end }}
+</div>
+</footer>
+</article>
+{{ end }}
+{{ template "sonic_theme_paper_mod/module/post-entry" . }}
+
+<footer class="page-footer">
+{{if (gt .posts.Pages 1)}}
+{{$pagination:=(indexPagination .posts.PageNum .posts.Pages 3)}}
+  {{if $pagination.HasPrev}}
+    <nav class="pagination">
+        <a class="prev" href="{{$pagination.PrevPageFullPath}}">
+          « Prev 
+        </a>
+      </nav>
+  {{end}}
+  {{if $pagination.HasNext}}
+  <nav class="pagination">
+    <a class="next" href="{{$pagination.NextPageFullPath}}">
+        Next » 
+    </a>
+  </nav>
+  {{end}}
+{{end}}
+</footer>
+</main>
+    
+{{template "sonic_theme_paper_mod/module/footer" .}}
+
+</body>
+
+</html>
+{{end}}
