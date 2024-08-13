@@ -9,7 +9,8 @@
 
 <body id="top">
   
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark.css">
+<link href="{{ .theme_base }}/assets/highlight/styles/github-dark.min.css" rel="stylesheet" />
+
   
 {{template "sonic_theme_paper_mod/module/header" .}}
 
@@ -54,7 +55,7 @@
 
 {{template "sonic_theme_paper_mod/module/footer" .}}
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script src="{{ .theme_base }}/assets/highlight/highlight.min.js"></script>
 <script>
   hljs.highlightAll();
 </script>
