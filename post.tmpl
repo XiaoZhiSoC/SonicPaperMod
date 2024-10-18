@@ -9,8 +9,8 @@
 
 <body id="top">
   
-<link href="{{ .theme_base }}/assets/highlight/styles/github-dark.min.css" rel="stylesheet" />
-
+<link href="{{ .theme_base }}/libs/highlight/styles/github-dark.min.css" rel="stylesheet" />
+<link href="{{ .theme_base }}/libs/katex/katex.min.css" rel="stylesheet" />
   
 {{template "sonic_theme_paper_mod/module/header" .}}
 
@@ -55,10 +55,9 @@
 
 {{template "sonic_theme_paper_mod/module/footer" .}}
 
-<script src="{{ .theme_base }}/assets/highlight/highlight.min.js"></script>
-<script>
-  hljs.highlightAll();
-</script>
+<script src="{{ .theme_base }}/libs/highlight/highlight.min.js"></script>
+<script src="{{ .theme_base }}/libs/katex/katex.min.js"></script>
+<script>hljs.highlightAll();</script>
 
 </body>
 </html>
