@@ -7,6 +7,7 @@
 - 首页 Telegran、Twitter 图标添加
 - 修改代码块字体
 - 支持代码高亮（highlight.js）
+- 支持KaTeX (katex.js)
 
 演示：[我的博客](https://blog.xiaozhisoc.net)
 
